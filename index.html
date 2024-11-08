@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В кого більше число</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Гра "В кого більше число"</h1>
+        
+        <!-- Початковий екран для введення імені та завантаження аватару -->
+        <div id="inputSection" class="centered">
+            <label for="username">Введіть своє ім'я:</label>
+            <input type="text" id="username" placeholder="Ваше ім'я" required>
+            
+            <!-- Додамо завантаження аватарки -->
+            <label for="userAvatar">Завантажте свою аватарку:</label>
+            <input type="file" id="userAvatar" accept="image/*">
+            
+            <button onclick="startGame()">Почати гру</button>
+            <button onclick="showRules()">Правила гри</button>
+        </div>
+
+        <!-- Основний екран гри -->
+        <div id="gameSection" style="display: none;">
+            <div class="player-info">
+                <div class="avatar-container">
+                    <h3>Гравець</h3>
+                    <img id="playerAvatarImg" src="" alt="Аватар гравця" class="avatar">
+                    <p id="playerNumber" class="number-text">0</p>
+                </div>
+                <div class="avatar-container">
+                    <h3>Комп'ютер</h3>
+                    <img id="computerAvatarImg" src="https://img.freepik.com/free-vector/graident-ai-robot-vectorart_78370-4114.jpg" alt="Аватар комп'ютера" class="avatar">
+                    <p id="computerNumber" class="number-text">0</p>
+                </div>
+            </div>
+            
+            <div id="scoreboard">
+                <p>Рахунок:</p>
+                <div class="score">
+                    <span id="playerScore">0</span> - <span id="computerScore">0</span>
+                </div>
+            </div>
+            
+            <div id="roundResult" class="result-text"></div>
+            <button onclick="playRound()">Кинути число</button>
+            <button onclick="resetGame()" id="resetButton">Почати з початку</button>
+        </div>
+
+        <!-- Вспливаюче вікно результату гри -->
+        <div id="popupResult" class="popup" style="display: none;">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">Закрити</button>
+        </div>
+
+        <!-- Модальне вікно з правилами -->
+        <div id="rulesPopup" class="popup" style="display: none;">
+            <h2>Правила гри</h2>
+            <p>1. Гравець та комп'ютер генерують випадкові числа від 1 до 100.</p>
+            <p>2. Хто отримає більше число, той виграє раунд.</p>
+            <p>3. Гра триває до 3 перемог.</p>
+            <button onclick="closeRules()">Закрити</button>
+        </div>
+    </div>
+	
+    <script src="script.js"></script>
+</body>
+</html>

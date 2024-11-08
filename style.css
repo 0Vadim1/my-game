@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #7b68ee;
+    border-radius: 8px;
+    outline: none;
+    width: 80%;
+    max-width: 250px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus {
+    border-color: #9370db;
+}
+
+#scoreboard {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #7b68ee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6a5acd;
+}
+
+.result-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Стили для всплывающего окна */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 0.5s;
+}
+
+/* Цвета для победы игрока и компьютера */
+.popup.win {
+    background-color: #28a745;
+}
+
+.popup.lose {
+    background-color: #dc3545;
+}
+
+/* Стиль для модального вікна правил */
+#rulesPopup {
+    background-color: #28a745;
+    color: #fff;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px 0;
+    object-fit: cover;
+}
+
+.number-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-image: url('https://images.wallpaperscraft.ru/image/single/neon_nadpis_stena_134368_3840x2160.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 0 0 40px rgba(255, 20, 147, 0.4);
+    max-width: 350px;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+    color: #ff4040; /* Насичений неоновий червоний */
+    margin-bottom: 20px;
+    text-shadow: 0 0 2px #ff4040, 0 0 5px rgba(255, 64, 64, 0.5); /* М'якше світіння */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8a2be2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 0 10px #8a2be2, 0 0 20px #ff1493;
+}
+
+button:hover {
+    background-color: #ff1493;
+    box-shadow: 0 0 20px #ff1493, 0 0 40px #8a2be2;
+}
+
+.result-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4040; /* Той самий червоний для узгодженості */
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 64, 64, 0.5), 0 0 15px rgba(255, 64, 64, 0.3); /* М'якше світіння */
+    text-shadow: 0 0 2px #ff4040, 0 0 5px rgba(255, 64, 64, 0.5); /* Зменшене світіння */
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00bfff; /* Насичений неоновий синій */
+    text-shadow: 0 0 2px #00bfff, 0 0 5px rgba(0, 191, 255, 0.5); /* М'яке світіння */
+}
+
